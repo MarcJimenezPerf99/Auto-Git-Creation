@@ -15,7 +15,7 @@ pipeline {
                 //     sh 'curl -u "MarcJimenezPerf99:\'{$pass}\'" https://api.github.com/user/repos -d \'{"name":"test"}\''
                 // }
                 withCredentials([usernamePassword(credentialsId: '0baa423f-35a5-44ca-b95d-c742463e9afa', passwordVariable: 'pass', usernameVariable: 'user')]) {
-                    sh 'curl -X POST -i -H "Authorization: token $pass" --data "{\"name\":\"test_repo\"}" https://api.github.com/user/repos'
+                    sh 'curl -X POST -i -H "Authorization: token $pass" --data \"{\"name\":\"test_repo\"}\" https://api.github.com/user/repos'
                 }
             }
         }
