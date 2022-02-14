@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'Name of Repository', defaultValue: '', description: 'The desired name for the repository')
+    }
     stages {
         stage('Create Git Repo') {
             steps {
