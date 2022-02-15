@@ -1,2 +1,0 @@
-pipeline(groovy syntax) = sh 'curl -X POST -i -H \"Authorization: token $pass\" --data "{\\"name\\":\\"$repoName\\"}" https://api.github.com/user/repos'
-localmachine = curl -X POST -i -H "Authorization: token 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" --data "{\"name\":\"test\"}" https://api.github.com/user/repos
